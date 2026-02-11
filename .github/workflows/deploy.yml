@@ -26,10 +26,12 @@ jobs:
           mkdir -p ../dist/perceptron
           cp -r dist/* ../dist/perceptron
 
+      - name: Copy Main Landing Page
+        run: cp index.html dist/index.html # This moves your landing page to the root of the deployment
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist # This deploys the combined dist folder to the gh-pages branch
 
-      - name: Copy Main Landing Page
-        run: cp index.html dist/index.html # This moves your landing page to the root of the deployment
+      
