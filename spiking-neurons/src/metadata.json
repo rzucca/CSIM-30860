@@ -1,0 +1,5 @@
+{
+  "name": "Spiking Neuron Explorer",
+  "description": "An interactive simulation of the Izhikevich neuron model, illustrating depolarization, action potentials, and neuronal summation through real-time physics and visual explanations.",
+  "requestFramePermissions": []
+}
