@@ -33,7 +33,6 @@ const SigmoidModule: React.FC = () => {
           </h2>
           <p className="text-slate-300 leading-relaxed mb-4">
             The Sigmoid neuron replaced the hard threshold of the TLU with a <span className="text-purple-400 italic font-semibold">differentiable</span> function. 
-            This "smoothness" is what makes backpropagation possible.
           </p>
           <div className="space-y-3">
             <div className="flex items-start gap-3">

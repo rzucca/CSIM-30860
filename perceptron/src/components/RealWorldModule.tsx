@@ -186,7 +186,7 @@ const RealWorldModule: React.FC = () => {
       <div className="space-y-6">
         <div className="bg-slate-900 p-6 rounded-2xl border border-slate-800">
           <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-blue-400">
-            <Award size={24} /> Extreme Moon Task
+            <Award size={24} /> A real problem
           </h2>
           
           <div className="flex bg-slate-950 p-1 rounded-xl border border-slate-800 mb-4">
@@ -206,8 +206,8 @@ const RealWorldModule: React.FC = () => {
 
           <p className="text-slate-400 text-sm leading-relaxed mb-4">
             {datasetType === 'linear' 
-              ? 'The Exam Problem (Linear): A predictable scenario where "Pass" and "Fail" results are separated by a simple threshold of effort and rest. A single neuron can easily draw a line between success and failure.' 
-              : 'The Exam Problem (Complex): In this interlocking "Moon" distribution, students might pass with low sleep but extreme prep, or fail despite moderate prep due to total exhaustion. No straight line can separate these intertwined outcomes.'}
+              ? 'The Exam Problem (Linear): A predictable scenario where "Pass" and "Fail" results are separated by a simple threshold of effort and rest. A single layer perceptron can easily draw a line between success and failure.' 
+              : 'The Exam Problem (Complex): In this interlocking distribution, students might pass with low sleep but extreme prep, or fail despite moderate prep due to total exhaustion. No straight line can separate these intertwined outcomes.'}
           </p>
           <div className="p-4 bg-slate-950 rounded-xl border border-slate-800 space-y-3">
             <div className="flex justify-between items-center text-xs">
