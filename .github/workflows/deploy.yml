@@ -1,0 +1,35 @@
+name: Deploy Multi-App
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install and Build App 1
+        run: |
+          cd spiking-neurons
+          npm install
+          npm run build
+          mkdir -p ../dist/spiking-neurons
+          cp -r dist/* ../dist/spiking-neurons
+
+      - name: Install and Build App 2
+        run: |
+          cd perceptron
+          npm install
+          npm run build
+          mkdir -p ../dist/perceptron
+          cp -r dist/* ../dist/perceptron
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist # This deploys the combined dist folder to the gh-pages branch
+
+      - name: Copy Main Landing Page
+        run: cp index.html dist/index.html # This moves your landing page to the root of the deployment
