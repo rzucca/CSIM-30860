@@ -26,6 +26,14 @@ jobs:
           mkdir -p ../dist/perceptron
           cp -r dist/* ../dist/perceptron
 
+      - name: Install and Build App 3
+        run: |
+          cd pavlovian-lab-classical-conditioning-demo
+          npm install
+          npm run build
+          mkdir -p ../dist/pavlovian-lab-classical-conditioning-demo
+          cp -r dist/* ../dist/pavlovian-lab-classical-conditioning-demo
+
       - name: Copy Main Landing Page
         run: cp index.html dist/index.html # This moves your landing page to the root of the deployment
 
